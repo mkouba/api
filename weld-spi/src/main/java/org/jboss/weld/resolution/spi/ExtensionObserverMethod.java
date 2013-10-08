@@ -24,14 +24,14 @@ import javax.enterprise.inject.spi.ProcessAnnotatedType;
 import javax.enterprise.inject.spi.WithAnnotations;
 
 /**
- * Represents an observer method that observer {@link ProcessAnnotatedType}. In addition to {@link ObserverMethod}, implementations of this interface expose
- * information about the required annotations defined using {@link WithAnnotations}.
+ * Represents an observer method defined on an extension. If the observer method is a {@link ProcessAnnotatedType} observer method and the method defines
+ * required annotations using the {@link WithAnnotations} annotation, the required annotations are exposed by the {@link #getRequiredAnnotations()} method.
  *
  * @author Jozef Hartinger
  *
  * @param <T> the event type
  */
-public interface ProcessAnnotatedTypeObserverMethod<T> extends ObserverMethod<T> {
+public interface ExtensionObserverMethod<T> extends ObserverMethod<T> {
 
     Collection<Class<? extends Annotation>> getRequiredAnnotations();
 }

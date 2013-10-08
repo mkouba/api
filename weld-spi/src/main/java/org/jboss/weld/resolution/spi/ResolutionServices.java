@@ -22,5 +22,5 @@ import org.jboss.weld.bootstrap.api.Service;
 
 public interface ResolutionServices extends Service {
 
-    ProcessAnnotatedTypeObserverMethodResolver getProcessAnnotatedTypeObserverMethodResolver(Set<ProcessAnnotatedTypeObserverMethod<?>> observers);
+    ProcessAnnotatedTypeObserverMethodResolver getProcessAnnotatedTypeObserverMethodResolver(Set<ExtensionObserverMethod<?>> observers);
 }

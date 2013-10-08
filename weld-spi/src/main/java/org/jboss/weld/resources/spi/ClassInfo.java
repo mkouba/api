@@ -22,6 +22,8 @@ public interface ClassInfo {
 
     String getClassName();
 
+    String getSuperclassName();
+
     boolean isAnnotationPresent(Class<? extends Annotation> annotation);
 
     int getModifiers();

@@ -20,5 +20,5 @@ import java.util.Set;
 
 public interface ProcessAnnotatedTypeObserverMethodResolver {
 
-    Set<ProcessAnnotatedTypeObserverMethod<?>> resolveObserverMethods(String className);
+    Set<ExtensionObserverMethod<?>> resolveObserverMethods(String className);
 }
