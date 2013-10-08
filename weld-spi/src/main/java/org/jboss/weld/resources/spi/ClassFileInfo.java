@@ -16,9 +16,25 @@
  */
 package org.jboss.weld.resources.spi;
 
-import org.jboss.weld.bootstrap.api.BootstrapService;
+import java.lang.annotation.Annotation;
 
-public interface ClassIntrospector extends BootstrapService {
+public interface ClassFileInfo {
 
-    ClassInfo getClassInfo(String className);
+    String getClassName();
+
+    String getSuperclassName();
+
+    boolean isAnnotationPresent(Class<? extends Annotation> annotation);
+
+    int getModifiers();
+
+    boolean hasCdiConstructor();
+
+    boolean isAssignableFrom(Class<?> javaClass);
+
+    boolean isAssignableTo(Class<?> javaClass);
+
+    boolean isVetoed();
+
+    boolean isTopLevelClass();
 }
