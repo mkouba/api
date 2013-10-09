@@ -24,7 +24,9 @@ public interface ClassFileInfo {
 
     String getSuperclassName();
 
-    boolean isAnnotationPresent(Class<? extends Annotation> annotation);
+    boolean isAnnotationDeclared(Class<? extends Annotation> annotation);
+
+    boolean containsAnnotation(Class<? extends Annotation> annotation);
 
     int getModifiers();
 
